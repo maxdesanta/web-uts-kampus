@@ -1,0 +1,19 @@
+.profile {
+ padding: 60px 32px;
+}
+
+.profile .image-profile img {
+    width: 300px;
+}
+
+.profile .container {
+    column-gap: 40px;
+}
+
+.profile .profile-content {
+    padding-right: 150px;
+}
+
+.profile .profile-content h2 {
+    margin-bottom: 12px;
+}

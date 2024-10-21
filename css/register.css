@@ -1,0 +1,65 @@
+.register-bg {
+    background: url("../assets/bg-daftar.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+}
+
+.register-bg .content.container {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background: rgba(64, 141, 134, 0.7);;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 20px;
+    color: white;
+}
+
+
+/* saya memberikan row-gap untuk mengatur jarak secara vertikal, row-gap adalah salah satu atribut flex yang merupakan layout css. untuk style-nya sendiri saya memanggil class bernama daftar dan container yang dibungkus class rergister-bg. .daftar.container artinya memanggil class daftar dan container. tag yang membungkus class register-bg di dalamnya ada tag div yang nama class-nya daftar dan container */
+.register-bg .daftar.container {
+    row-gap: 5px;
+    flex-direction: column;
+}
+
+/* saya memberikan column-gap untuk mengatur jarak secara horizontal, column-gap adalah salah satu atribut flex yang merupakan layout css. untuk style-nya sendiri saya memanggil class bernama form-group dan container yang dibungkus class rergister-bg. .form-group.container artinya memanggil class form-group dan container. tag yang membungkus class register-bg di dalamnya ada tag div yang nama class-nya form-group dan container*/
+.register-bg .form-group.container {
+    column-gap: 5px;
+}
+
+.register-bg .form-jurusan {
+    display: flex;
+    flex-direction: column;
+}
+
+.register-bg .form-name, .register-bg .form-email, .register-bg .form-tanggal, .register-bg .form-jurusan, .register-bg .form-alamat, .register-bg .form-telepon {
+    width: 350px;
+}
+
+.register-bg .form-name input, .register-bg .form-email input, .register-bg .form-tanggal input, .register-bg .form-jurusan select, .register-bg .form-alamat input, .register-bg .form-telepon input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-left: 0px;
+    background-color: #ffff;
+    border-radius: 5px;
+    border: 1px solid black;
+    color: black;
+}
+
+.register-bg .form-name label, .register-bg .form-email label, .register-bg .form-tanggal label, .register-bg .form-jurusan label, .register-bg .form-alamat label, .register-bg .form-telepon label {
+    font-weight: bold;
+}
+
+.btn-daftar {
+    background-color: #cdfaf6;
+    color: black;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 40px;
+}

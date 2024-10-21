@@ -1,0 +1,298 @@
+/* css reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* global */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  display: flex;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #cdfaf6;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #cdfaf6;
+}
+
+input,
+textarea {
+  width: 100%;
+  margin-left: 10px;
+  background-color: #408d86;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.tentang,
+.fasilitas,
+.jurusan,
+.kontak {
+  padding: 32px;
+}
+
+.tentang,
+.jurusan,
+.profile {
+  background-color: #e0f2f1;
+}
+
+.sec-title {
+  font-size: 48px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* header */
+header {
+  background-color: #408d86;
+  color: white;
+  padding: 10px 20px;
+}
+
+/* memberikan margin-left di image di dalam tag header supaya gambarnya bergeser ke kiri */
+header img {
+  margin-left: 550px;
+}
+
+header .container {
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo img {
+  width: 50px;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  column-gap: 22px;
+}
+
+header nav .btn-daftar {
+  background-color: #cdfaf6;
+  color: black;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  margin-left: 20px;
+}
+
+/* banner */
+.banner {
+  background: url("../assets/banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
+
+.banner .container {
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 64px;
+  background: rgba(64, 141, 134, 0.5);
+}
+
+/* tentang */
+.tentang .tentang-sejarah .container {
+  column-gap: 20px;
+}
+
+.tentang .tentang-sejarah .tentang-isi p {
+  color: #728f9e;
+}
+
+.tentang .container .tentang-gambar img {
+  width: 500px;
+}
+
+.tentang .tentang-isi.container {
+  flex-direction: column;
+  row-gap: 18px;
+}
+
+/* fasilitas */
+.fasilitas {
+  background-color: #408d86;
+  color: #d0ebea;
+}
+
+.fasilitas h2 {
+  color: #ffff;
+}
+
+.fasilitas .container {
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.fasilitas .sec-title {
+  text-align: center;
+}
+
+/* dengan memberikan column-gap fungsinya untuk memberikan jarak secara horizonta, kenapa menggunakan column-gap karena awalnya saya menggunakan flexbox yaitu sebuah layout css. untuk pemanggilannya saya memanggil class container yang dibungkus class fasilitas-content dan dibungkus lagi dengan class fasilitas  */
+.fasilitas .fasilitas-content .container {
+  flex-direction: row;
+  justify-content: space-evenly;
+  column-gap: 100px;
+}
+
+.fasilitas .fasilitas-card {
+  width: 30%;
+  text-align: center;
+}
+
+.fasilitas .fasilitas-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.fasilitas .fasilitas-card .fasilitas-title {
+  margin-top: 8px;
+  font-size: 21px;
+}
+
+/* jurusan */
+.jurusan .container {
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.jurusan .sec-title {
+  text-align: center;
+}
+
+.jurusan .jurusan-card {
+  width: 24%;
+  height: 250px;
+  position: relative;
+}
+
+.jurusan .jurusan-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.jurusan .jurusan-content {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  background: rgba(64, 141, 134, 0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.6s;
+}
+
+.jurusan .jurusan-layout.container {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.jurusan .jurusan-content:hover {
+  opacity: 1;
+}
+
+.jurusan .jurusan-card .jurusan-content h3 {
+  color: white;
+  font-size: 21px;
+}
+
+/* kontak */
+.kontak {
+  background-color: #408d86;
+  color: white;
+  text-align: center;
+}
+
+.kontak .container {
+  flex-direction: column;
+  row-gap: 50px;
+}
+
+.form-kontak .container {
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.kontak .form-input {
+  border: 1px solid #cdfaf6;
+  border-radius: 10px;
+  padding: 10px 12px;
+  flex-direction: row;
+  width: 50%;
+}
+
+.kontak .form-kontak .container .btn-submit {
+  background-color: #cdfaf6;
+  border: none;
+  color: black;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  margin-left: 480px;
+}
+
+/* footer */
+footer {
+  background-color: #408d86;
+  padding: 12px 32px;
+  color: white;
+  border-top: 1px solid white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .social-media {
+  display: flex;
+  column-gap: 10px;
+}
